@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Name Generator</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div>
+      <span id="name"></span>
+    </div>
+
+    <!-- main page-->
+    <div id="centerViewPort">
+        <div id="bannerDiv">
+          <div id="bannerText">Baby Name Generator</div>
+          <p id="description">If you're anything like me you have a lot of trouble coming up with good baby names.
+            So I created a list of the top baby names of 2018. Just click boy or girl for a list of random names.
+            Hopefully you will find something you like! If you see a name you like click to add it to your personal list.
+            I've already added the top 10 names to your list.
+          </p>
+          <button id="modal-btn">Add New Name</button>
+          <p>To quickly add a new name to your favorites list enter it below</p>
+          <div id="row">
+            <div class="column">
+              <input type="text" id="newBoyName">
+              <button id="addBoyName">Add</button>
+              <br>
+
+              <button id="boyButton">&#x2642;</button>
+              <div class="pointer" id="boyName"></div>
+              <ul class="pointer" id="boyNameList"></ul>
+            </div>
+            <div class="column">
+              <input type="text" id="newGirlName">
+              <button id="addGirlName">Add</button>
+              <br>
+
+              <button id="girlButton">&#x2640;</button>
+              <div class="pointer" id="girlName"></div>
+              <ul class="pointer" id="girlNameList"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Slide out for favorite boy list -->
+      <div id="slideoutBoy">
+        <span>Favorite Boy Names</span>
+        <div id="slideoutInnerBoy">
+          <ul class="pointer" id="favBoyList"></ul>
+        </div>
+      </div>
+      
+      <!-- Slide out for favorite girl list -->
+      <div id="slideoutGirl">
+        <span>Favorite Girl Names</span>
+        <div id="slideoutInnerGirl">
+          <ul class="pointer" id="favGirlList"></ul>
+        </div>
+      </div>
+
+      <!-- Modal for inputting/editing name data -->
+      <div class="inputModal">
+        <div class="inputModal-content">
+          <span class="close-btn">&times;</span>
+          <h2 id="modalDescription">Feel free to add a name to our list</h2>
+          <div id="rightCheck">
+            <input type="checkbox" id="inputFav" name="inputFav" value=1> Add to favorites?<br>
+          </div>
+          <div>
+            <label for="inputName">
+              Name: <input type="text" id="inputName" class="formLayout" required>
+            </label>
+          </div>
+          <br>
+          <div>
+            <span class="formLayout">Gender: </span>
+            <input type="radio" id="genderMale" name="inputGender" value="M">
+              <label for="genderMale">Male</label>
+            <input type="radio" id="genderFemale" name="inputGender" value="F">
+              <label for="genderFemale">Female</label>
+            <input type="radio" id="genderNone" name="inputGender" value="N">
+              <label for="genderNone">None</label>
+          </div>
+          <br>
+          <div>
+            <label for="inputN">
+              How many people have this name? <input type="text" id="inputN" class="formLayout">
+            </label>
+          </div>
+          <br>
+          <div>
+            <label for="inputRank">
+              Popularity Ranking: <input type="text" id="inputRank" class="formLayout">
+            </label>
+          </div>
+          <br>
+          <div>
+            <label for="inputOrigin">
+              Origin: <textarea id="inputOrigin" class="formLayout" rows="4" cols="30"></textarea>
+            </label>
+          </div>
+          <br>
+          <div class="buttonWrapper">
+            <button class="modalButtons" id="cancel">Cancel</button>
+            <button class="modalButtons" id="submit">Submit</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal to display data about the boy names -->
+      <div id="boyNameData">
+        <div>
+          <h2 id="boyNameDataName"></h2>
+          <span id="boyNameDataSpan"></span>
+          <span id="modalBtnSpanBoy">
+            <button class="modalButtons" id="boyDataClose">Close</button>
+            <button class="modalButtons" id="boyDataDelete">Delete</button>
+            <button class="modalButtons" id="boyDataEdit">Edit</button>
+          </span>
+        </div>
+      </div>
+      
+      <!-- Modal to display data about the girl names -->
+      <div id="girlNameData">
+        <div>
+          <h2 id="girlNameDataName"></h2>
+          <span id="girlNameDataSpan"></span>
+          <span id="modalBtnSpanGirl">
+            <button class="modalButtons" id="girlDataClose">Close</button>
+            <button class="modalButtons" id="girlDataDelete">Delete</button>
+            <button class="modalButtons" id="girlDataEdit">Edit</button>
+          </span>
+        </div>
+      </div>
+      
+      <!-- Modal for login screen -->
+      <div class="loginModal">
+        <div class="loginModal-content">
+          <h2 class="centerDescription">Login</h2>
+          <div>
+            <label for="inputUserName">
+              Username: <input type="text" id="inputUserName" class="formLayout" required>
+            </label>
+          </div>
+          <br>
+          <div>
+            <label for="password">
+              Password: <input type="password" id="password" class="formLayout" required>
+            </label>
+          </div>
+          <br>
+          <div class="buttonWrapper">
+            <button class="modalButtons" id="loginBtn">Login</button>
+          </div>
+          <br>
+          <hr>
+          <div id="newUserDiv">
+            <button id="newUserBtn">New User</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Modal for registration -->
+      <div id="registrationModal">
+        <div id="registrationModal-content">
+          <span class="close-btn">&times;</span>
+          <h2 class="centerDescription">Registration</h2>
+          <div>
+            <label for="inputFirstName">
+              First Name: <input type="text" id="inputFirstName" class="formLayout" required>
+            </label>
+          </div>
+          <br>
+          <div>
+            <label for="inputLastName">
+              Last Name: <input type="text" id="inputLastName" class="formLayout" required>
+            </label>
+          </div>
+          <br>
+          <div>
+            <label for="inputNewEmail">
+              Email Address: <input type="email" id="inputNewEmail" class="formLayout">
+            </label>
+          </div>
+          <br>
+          <div>
+            <label for="inputNewPassword">
+              Password: <input type="password" id="inputNewPassword" class="formLayout">
+            </label>
+          </div>
+          <br>
+          <div class="buttonWrapper">
+            <button class="modalButtons" id="cancelReg">Cancel</button>
+            <button class="modalButtons" id="submitReg">Submit</button>
+          </div>
+        </div>
+      </div>
+
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
