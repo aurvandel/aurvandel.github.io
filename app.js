@@ -555,9 +555,9 @@ addBoy.onclick = function () {
 
   var body = "name=" + encodeURIComponent(newBoy) + "&" +
   "gender=" + encodeURIComponent('M') + "&" +
-  "n=" + encodeURIComponent(null) + "&" +
-  "rank=" + encodeURIComponent(null) + "&" +
-  "origin=" + encodeURIComponent(null) + "&" +
+  "n=" + encodeURIComponent(-1) + "&" +
+  "rank=" + encodeURIComponent(-1) + "&" +
+  "origin=" + encodeURIComponent(" ") + "&" +
   "fav=" + encodeURIComponent(1);
 
   fetch(BASE_URL + "/favBoyNames", {
@@ -584,9 +584,9 @@ addGirl.onclick = function () {
 
   var body = "name=" + encodeURIComponent(newGirl) + "&" +
     "gender=" + encodeURIComponent('F') + "&" +
-    "n=" + encodeURIComponent(null) + "&" +
-    "rank=" + encodeURIComponent(null) + "&" +
-    "origin=" + encodeURIComponent(null) + "&" +
+    "n=" + encodeURIComponent(-1) + "&" +
+    "rank=" + encodeURIComponent(-1) + "&" +
+    "origin=" + encodeURIComponent(" ") + "&" +
     "fav=" + encodeURIComponent(1);
 
   fetch(BASE_URL + "/favGirlNames", {
