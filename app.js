@@ -555,8 +555,8 @@ addBoy.onclick = function () {
 
   var body = "name=" + encodeURIComponent(newBoy) + "&" +
   "gender=" + encodeURIComponent('M') + "&" +
-  "n=" + encodeURIComponent("") + "&" +
-  "rank=" + encodeURIComponent("") + "&" +
+  "n=" + encodeURIComponent("999") + "&" +
+  "rank=" + encodeURIComponent("999") + "&" +
   "origin=" + encodeURIComponent(" ") + "&" +
   "fav=" + encodeURIComponent(1);
 
@@ -584,8 +584,8 @@ addGirl.onclick = function () {
 
   var body = "name=" + encodeURIComponent(newGirl) + "&" +
     "gender=" + encodeURIComponent('F') + "&" +
-    "n=" + encodeURIComponent(-1) + "&" +
-    "rank=" + encodeURIComponent(-1) + "&" +
+    "n=" + encodeURIComponent(999) + "&" +
+    "rank=" + encodeURIComponent(999) + "&" +
     "origin=" + encodeURIComponent(" ") + "&" +
     "fav=" + encodeURIComponent(1);
 
