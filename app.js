@@ -555,8 +555,8 @@ addBoy.onclick = function () {
 
   var body = "name=" + encodeURIComponent(newBoy) + "&" +
   "gender=" + encodeURIComponent('M') + "&" +
-  "n=" + encodeURIComponent(-1) + "&" +
-  "rank=" + encodeURIComponent(-1) + "&" +
+  "n=" + encodeURIComponent("") + "&" +
+  "rank=" + encodeURIComponent("") + "&" +
   "origin=" + encodeURIComponent(" ") + "&" +
   "fav=" + encodeURIComponent(1);
 
