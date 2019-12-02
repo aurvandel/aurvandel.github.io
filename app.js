@@ -347,19 +347,19 @@ function submitName(method, path) {
     var newNInput = document.querySelector("#inputN");
     var newN = newNInput.value;
     if (!newN) {
-      newN = null;
+      newN = -1;
     }
 
     var newRankInput = document.querySelector("#inputRank");
     var newRank = newRankInput.value;
     if (!newRank) {
-      newRank = null;
+      newRank = -1;
     }
 
     var newOriginInput = document.querySelector("#inputOrigin");
     var newOrigin = newOriginInput.value;
     if (!newOrigin) {
-      newOrigin = null;
+      newOrigin = " ";
     }
 
     var newFavInput = document.querySelector("#inputFav");
